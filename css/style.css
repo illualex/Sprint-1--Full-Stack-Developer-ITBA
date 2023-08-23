@@ -12,7 +12,8 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.topnav{
+.topnav {
+    height: 105px;
     box-shadow: 0 0 2px 0 black;
 }
 
@@ -27,17 +28,15 @@ body {
 
 /* ESTILO DEL LOGO */
 .imgLogo {
-    width: 120px;
+    width: 110px;
 }
-
-
-
 
 /* BOTONES DEL MENU */
 .buttonMenu {
     display: flex;
-    padding: 20px;
+    padding: 18px;
 }
+
 .btnInicioSesion,
 .btnRegistrarse {
     align-items: center;
@@ -69,39 +68,48 @@ body {
     will-change: transform, opacity;
     z-index: 0;
 }
-.btnRegistrarse{
+
+.btnRegistrarse {
     background-color: red;
     color: white;
 }
-.btnInicioSesion:hover{
+
+.btnInicioSesion:hover {
     background: black;
     color: white;
 }
+
 .btnRegistrarse:hover {
     background: gray;
     color: black;
 }
+
 .btnInicioSesion,
 .btnRegistrarse:active {
     box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
     outline: none;
 }
+
 .btnInicioSesion,
 .btnRegistrarse:not(:disabled) {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+
 .btnInicioSesion,
 .btnRegistrarse:not(:disabled):hover {
     box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
 }
+
 .btnInicioSesion,
 .btnRegistrarse:not(:disabled):focus {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+
 .btnInicioSesion,
 .btnRegistrarse:not(:disabled):active {
     box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
 }
+
 .btnInicioSesion,
 .btnRegistrarse:disabled {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
@@ -123,9 +131,11 @@ body {
 
     transition: color 0.3s ease;
 }
+
 #menuToggle a:hover {
     color: tomato;
 }
+
 #menuToggle input {
     display: block;
     padding: 30px;
@@ -139,6 +149,7 @@ body {
     z-index: 2;
     -webkit-touch-callout: none;
 }
+
 #menuToggle span {
     display: block;
     width: 45px;
@@ -152,45 +163,94 @@ body {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
+
 #menuToggle span:first-child {
     transform-origin: 0% 0%;
 }
+
 #menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
 }
+
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: red;
 }
+
 #menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
+
 #menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
+
 #menu {
     position: absolute;
     width: 300px;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
+
 #menu li {
     padding: 10px 0;
-    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
+
 #menuToggle input:checked~ul {
     transform: none;
+}
+
+/* MENU ACORDEON */
+.accordion,
+.accordion-aboutUs {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    background-color: #ededed;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion-aboutUs:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\00002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+
+}
+
+.active:after {
+    content: "\00002D";
+}
+
+.panel {
+    padding: 0 0 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
