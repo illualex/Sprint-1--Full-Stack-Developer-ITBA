@@ -4,26 +4,55 @@
 font-family: 'Oswald', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto Condensed', sans-serif; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
     background-color: #F0F3F5;
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
 }
 
-.topnav {
-    height: 105px;
-    box-shadow: 0 0 2px 0 black;
+main {
+    padding: 15px 0;
 }
 
-.grid-container-menu {
+footer {
+    padding: 10px 20px;
+    background-color: #d3d0c6;
+}
+
+
+
+
+
+
+/* GRID CSS */
+.grid-container {
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: 80px 0px 280px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.menuHamburger {
     gap: 0px;
     padding: 5px;
-    box-shadow: 0 0 1 black;
+    justify-content: space-between;
+    grid-template-columns: 80px 0px 280px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.carousel-grid,
+.footer-grid {
+    grid-column: 1 / span 3;
+    grid-row: 3;
 }
 
 /* ESTILO DEL LOGO */
@@ -253,4 +282,173 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+/* CAROUSEL */
+.mySlides {
+    display: none
+}
+
+.imgCarousel {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next {
+    right: -58px;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    left: -58px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+/* CARTAS PROMOCIONES/ETC */
+.container-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 40px;
+    row-gap: 50px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 260px;
+    height: 300px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: grid;
+    align-items: center;
+
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.img-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(calc(1 + (var(--hover, 0) * 0.25))) rotate(calc(var(--hover, 0) * -5deg));
+    transition: transform 0.2s;
+    border-radius: 17px;
+}
+
+/* FOOTER ESTILO */
+.container-footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer-condiciones {
+    text-align: left;
+    padding-top: 30px;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-redes-app {
+    padding: 10px;
+    text-align: center;
+}
+
+.img-redes {
+    padding: 10px;
+    cursor: pointer;
+    width: 55px;
+}
+
+.img-apps {
+    padding: 10px;
+    cursor: pointer;
+    width: 60px;
 }
