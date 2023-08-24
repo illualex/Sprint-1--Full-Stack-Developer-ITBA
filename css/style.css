@@ -254,3 +254,76 @@ body {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+label{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.amount{
+    margin-bottom: 25px;
+}
+
+section input{
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    border-bottom: 3px darkred solid;
+    font-size: 1.5rem;
+}
+
+section label{
+    display: block;
+}
+
+.wraper{
+    display: flex;
+    align-content: center ;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.calcular{
+    padding: 10px 25px;
+    border-radius: 7px;
+    background-color: darkred;
+    border: 2px solid #000;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    width: max-content;
+}
+
+.wraper header{
+    width: 100%;
+    background-color: darkred;
+    display: flex;
+    align-content:flex-start ;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 50px 0 50px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wraper header h1{
+    margin: 0 0 0 30px;
+    padding: 20px;
+}
+
+.wraper section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
