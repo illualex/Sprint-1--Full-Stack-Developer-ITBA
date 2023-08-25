@@ -11,25 +11,19 @@ font-family: 'Roboto Condensed', sans-serif; */
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-color: #F0F3F5;
     font-family: 'Open Sans', sans-serif;
     height: 100%;
 }
 
-main {
-    padding: 15px 0;
+main{
+    padding-top: 8px;
 }
 
 footer {
-    padding: 10px 20px;
-    background-color: #d3d0c6;
+    padding: 0 20px;
+    border-top: gray 0.1px solid;
 }
-
-
-
-
 
 
 /* GRID CSS */
@@ -46,7 +40,7 @@ footer {
     padding: 5px;
     justify-content: space-between;
     grid-template-columns: 80px 0px 280px;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px gray;
 }
 
 .carousel-grid,
@@ -220,7 +214,7 @@ footer {
     position: absolute;
     width: 300px;
     margin: -100px 0 0 -50px;
-    padding: 50px;
+    padding: 45px;
     padding-top: 125px;
     background: #ededed;
     list-style-type: none;
@@ -242,7 +236,7 @@ footer {
 
 /* MENU ACORDEON */
 .accordion,
-.accordion-aboutUs {
+.btnMenu {
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -260,7 +254,7 @@ footer {
     background-color: #ccc;
 }
 
-.accordion-aboutUs:hover {
+.btnMenu:hover {
     background-color: #ccc;
 }
 
@@ -421,54 +415,36 @@ footer {
 
 
 /* PAGINA NOSOTROS */
-.block {
+.blockNosotros {
     width: 100%;
 }
-
-#p1 {
-    margin: 1em;
-    font-family: 'Roboto Condensed', sans-serif;
-    ;
-    width: auto;
-    text-align: left;
-    height: 1rem;
-    font-size: smaller;
-
-}
-
-
-#inst-image {
+.imgNosotros {
     width: 100%;
     height: auto;
-
 }
-
-#p2 {
+.pNosotros {
     font-family: 'Open Sans', sans-serif;
-    margin: 3em;
-    width: auto;
     text-align: justify;
     height: 1em;
+    padding: 10px 60px;
     padding-bottom: 10rem;
     box-sizing: content-box;
 
 }
-
-
-#UNITE {
+.h3Unite {
     color: red;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
     text-align: center;
-    margin: auto;
-    padding: auto;
-    padding-bottom: 2rem;
     box-sizing: content-box;
-
 }
 
 /* Botón OP-EMPLEO */
-
+.btnEmpleo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
 .btnOPEMPLEO {
     background-color: red;
     color: white;
@@ -477,7 +453,6 @@ footer {
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
     box-sizing: border-box;
-    cursor: pointer;
     fill: currentcolor;
     justify-content: center;
     letter-spacing: .25px;
@@ -513,6 +488,7 @@ footer {
     grid-template-columns: auto auto auto;
     padding: 20px;
     justify-content: space-between;
+    
 }
 
 .footer-condiciones {
