@@ -15,6 +15,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/aboutus.css">
 
   <title>BCIB Argentina - Codigo Maestro</title>
   <meta name="description" content="Banco Nacional ItBa de Argentina, menu inicial">
@@ -32,16 +33,15 @@
             <span></span>
             <span></span>
             <ul id="menu">
-              <button class="btnMenu"><a href="../pages/aboutus.html">Inicio</a></button>
-
+              <button class="btnMenu"><a href="../index.html">Inicio</a></button>
               <button class="accordion">Cuenta</button>
               <div class="panel">
-                <li><a href="../pages/pagos.html">Perfil</a></li>
-                <li><a href="../pages/pagos.html">Actividad</a></li>
-                <li><a href="../pages/atencion.html">Transferencias</a></li>
-                <li><a href="../pages/seguro.html">Préstamos</a></li>
+                <li><a href="./profile.html">Perfil</a></li>
+                <li><a href="./movement.html">Actividad</a></li>
+                <li><a href="./transference.html">Cotización</a></li>
+                <li><a href="./lending.html">Préstamos</a></li>
               </div>
-              <button class="btnMenu"><a href="../pages/aboutus.html">Nosotros</a></button>
+              <button class="btnMenu"><a href="./aboutus.html">Nosotros</a></button>
             </ul>
           </div>
         </nav>
@@ -51,17 +51,15 @@
       </div>
       <div class="menuGrid">
         <div class="buttonMenu">
-          <a href="#"><button class="btnInicioSesion">Iniciar Sesion</button></a>
-          <a href="#"><button class="btnRegistrarse">Hacete Cliente</button></a>
+          <a href="./signup.html"><button class="btnRegistrarse">Cerrar <br> sesión</button></a>
         </div>
       </div>
     </div>
 
   </header>
-
   <main>
-    <div class="blockNosotros">
-      <img src="../images/about-us/inst-image (2).jpg" class="imgNosotros" href="">
+    <div class="container-aboutUs">
+      <img src="../images/about-us/nosotros.jpg" class="imgNosotros" alt="Edificio de la empresa BCIB">
       <p class="pNosotros">Nos distinguimos por orientar nuestra vocación hacia el cliente. Por ello, en los últimos
         años,
         hemos
@@ -81,14 +79,11 @@
         accionistas, colaboradores y la sociedad en su conjunto.
       </p>
     </div>
-
-    <div class="blockNosotros">
+    <div class="container-aboutUs">
       <h3 class="h3Unite">SE PARTE DE NUESTRO EQUIPO</h3>
-
       <a class="btnEmpleo" href="#"><button class="btnOPEMPLEO">Oportunidades de empleo</button></a>
     </div>
   </main>
-
   <footer>
     <div class="container-footer">
       <div class="footer-condiciones">
@@ -109,20 +104,22 @@
       </div>
       <div class="footer-redes-app">
         <div class="redes">
-          <img class="img-redes" src="../images/redes-app/instagram.png" alt="logo instagram">
-          <img class="img-redes" src="../images/redes-app/facebook.png" alt="logo facebook">
-          <img class="img-redes" src="../images/redes-app/twitter.png" alt="logo twitter">
+          <a href="https://instagram.com/" target="_blank"><img class="img-redes"
+              src="../images/redes-app/instagram.png" alt="logo instagram"></a>
+          <a href="https://es-la.facebook.com/" target="_blank"><img class="img-redes"
+              src="../images/redes-app/facebook.png" alt="logo facebook"></a>
+          <a href="https://twitter.com/" target="_blank"><img class="img-redes" src="../images/redes-app/twitter.png"
+              alt="logo twitter"></a>
         </div>
         <div class="apps">
-          <img class="img-apps" src="../images/redes-app/google-play.png" alt="logo google playstore">
-          <img class="img-apps" src="../images/redes-app/apple-store.png" alt="logo apple store">
+          <a href="https://play.google.com/store/" target="_blank"><img class="img-apps"
+              src="../images/redes-app/google-play.png" alt="logo google playstore"></a>
+          <a href="https://www.apple.com/la/app-store/" target="_blank"><img class="img-apps"
+              src="../images/redes-app/apple-store.png" alt="logo apple store"></a>
         </div>
       </div>
     </div>
   </footer>
-
-
-
   <script src="../script/main.js" type="text/javascript"></script>
 </body>
 
